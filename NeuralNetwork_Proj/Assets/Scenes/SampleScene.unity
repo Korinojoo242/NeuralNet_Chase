@@ -122,6 +122,7 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &215266997
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +218,8 @@ MeshFilter:
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 =======
 >>>>>>> master
+=======
+>>>>>>> master
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +313,10 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 --- !u!1 &760396933
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +383,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 --- !u!1 &963194225
 GameObject:
@@ -455,8 +464,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.5473879, y: -0, z: -0, w: 0.836879}
   m_LocalPosition: {x: 0, y: 11.43, z: -14.36}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+>>>>>>> master
 =======
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
@@ -466,8 +480,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 66.376, y: 0, z: 0}
 --- !u!1 &1091755865
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1041833067
+>>>>>>> master
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1041833067
@@ -480,16 +499,22 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 1091755866}
   m_Layer: 0
   m_Name: Environment
 =======
+=======
+>>>>>>> master
   - component: {fileID: 1041833071}
   - component: {fileID: 1041833070}
   - component: {fileID: 1041833069}
   - component: {fileID: 1041833068}
   m_Layer: 5
   m_Name: Canvas
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,9 +522,12 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &1091755866
 Transform:
 =======
+=======
+>>>>>>> master
 --- !u!114 &1041833068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,11 +590,15 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!224 &1041833071
 RectTransform:
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 1091755865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -579,6 +611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011324581
 =======
+=======
+>>>>>>> master
   m_GameObject: {fileID: 1041833067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -594,6 +628,9 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1829389387
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,6 +640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 2011324585}
   - component: {fileID: 2011324584}
   - component: {fileID: 2011324583}
@@ -610,11 +648,16 @@ GameObject:
   m_Layer: 0
   m_Name: NPC
 =======
+=======
+>>>>>>> master
   - component: {fileID: 1829389388}
   - component: {fileID: 1829389390}
   - component: {fileID: 1829389389}
   m_Layer: 5
   m_Name: Image
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,8 +665,13 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!136 &2011324582
 CapsuleCollider:
+=======
+--- !u!224 &1829389388
+RectTransform:
+>>>>>>> master
 =======
 --- !u!224 &1829389388
 RectTransform:
@@ -632,6 +680,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 2011324581}
   m_Material: {fileID: 0}
@@ -644,6 +693,8 @@ RectTransform:
 --- !u!23 &2011324583
 MeshRenderer:
 =======
+=======
+>>>>>>> master
   m_GameObject: {fileID: 1829389387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -659,6 +710,7 @@ MeshRenderer:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829389389
 MonoBehaviour:
+<<<<<<< HEAD
 >>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -700,15 +752,20 @@ MonoBehaviour:
   m_SortingOrder: 0
 --- !u!33 &2011324584
 MeshFilter:
+=======
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 2011324581}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &2011324585
 Transform:
 =======
+=======
+>>>>>>> master
   m_GameObject: {fileID: 1829389387}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -733,11 +790,15 @@ Transform:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1829389390
 CanvasRenderer:
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 2011324581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -747,6 +808,10 @@ CanvasRenderer:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 1829389387}
+  m_CullTransparentMesh: 0
+>>>>>>> master
 =======
   m_GameObject: {fileID: 1829389387}
   m_CullTransparentMesh: 0
