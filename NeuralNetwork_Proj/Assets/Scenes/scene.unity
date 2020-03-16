@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29b341d89060704a80b22af854f0194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 94903964294832098, guid: d5fa524af94685b46bd22cb12dccd7b8,
+  EnemyPrefab: {fileID: 816551795490461627, guid: 2b4421ad1de3e3441bc690e2439113b3,
     type: 3}
   player: {fileID: 1018893790}
 --- !u!4 &276666307
@@ -301,7 +301,7 @@ Camera:
   far clip plane: 1000
   field of view: 84.35481
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 25.98214
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 1018893792}
   - component: {fileID: 1018893791}
   - component: {fileID: 1018893793}
+  - component: {fileID: 1018893794}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -425,6 +426,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb8163373f0ede4eb4307d224fc4c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1018893794
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018893790}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.33
 --- !u!1 &1066404008
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,8 +517,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066404008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.36, y: 4.18, z: 1.6}
-  m_LocalScale: {x: 2.3106196, y: 1.5640913, z: 1}
+  m_LocalPosition: {x: -0.4, y: 1.6, z: 1.6}
+  m_LocalScale: {x: 3.3943, y: 2.1321692, z: 1}
   m_Children:
   - {fileID: 1313064147}
   - {fileID: 847809649}

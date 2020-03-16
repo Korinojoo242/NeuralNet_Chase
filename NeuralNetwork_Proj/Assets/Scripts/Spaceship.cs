@@ -8,14 +8,11 @@ public class Spaceship : MonoBehaviour {
 
     private NeuralNetwork net;
     private Rigidbody2D rBody;
-    private Material[] mats;
+ 
 
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
-        mats = new Material[transform.childCount];
-        for(int i = 0; i < mats.Length; i++)
-            mats[i] = transform.GetChild(i).GetComponent<Renderer>().material;
     }
 
     void FixedUpdate ()
@@ -25,8 +22,6 @@ public class Spaceship : MonoBehaviour {
             float distance = Vector2.Distance(transform.position, player.position);
             if (distance > 20f)
                 distance = 20f;
-            for (int i = 0; i < mats.Length; i++)
-                mats[i].color = new Color(distance / 20f, (1f-(distance / 20f)), (1f - (distance / 20f))); 
 
             float[] inputs = new float[1];
 
@@ -68,7 +63,7 @@ public class Spaceship : MonoBehaviour {
 
             float[] output = net.FeedMeForward(inputs);
 
-            rBody.velocity = 2.5f * transform.up;
+            rBody.velocity = 4.5f * transform.up;
             rBody.angularVelocity = 500f * output[0];
 
             net.addNeuralFitness((1f-Mathf.Abs(inputs[0])));

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     private bool Traning = false;
-    private int populationSize = 50;
+    private int populationSize = 24;
     private int generationNumber = 0;
     private int[] layers = new int[] { 1, 10, 10, 1 }; //1 input and 1 output
     private List<NeuralNetwork> nets;
