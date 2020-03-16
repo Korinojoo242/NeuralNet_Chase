@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 //Gabrielle Hollaender 100623554
 //We will be using a FeedForward Neural network
 
-public class NeuralNetwork : MonoBehaviour
+public class NeuralNetwork : IComparable<NeuralNetwork>
 {
 	//array variables for our neural network layers
 
@@ -57,9 +58,9 @@ public class NeuralNetwork : MonoBehaviour
         //copy weights from each row and set our neural network weights to the copied weights
         for (int f = 0; f < n_weights.Length; f++)
         {
-            for (int g = 0; g < n_weights.Length; g++)
+            for (int g = 0; g < n_weights[f].Length; g++)
             {
-                for (int h = 0; h < n_weights.Length; h++)
+                for (int h = 0; h < n_weights[f][g].Length; h++)
                 {
                     n_weights[f][g][h] = copy_Weights[f][g][h];
                 }
@@ -188,7 +189,7 @@ public class NeuralNetwork : MonoBehaviour
     }
 
     //lets compare a network if we need to :D
-    public int CompareNetwork(NeuralNetwork otherNetwork)
+    public int CompareTo(NeuralNetwork otherNetwork)
     {
         //if there is no neural network
         if(otherNetwork == null)
