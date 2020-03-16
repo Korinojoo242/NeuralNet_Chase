@@ -90,7 +90,7 @@ public class NeuralNetwork : MonoBehaviour
 
         //go through every neuron that has a connection to weight
         //has to contain the weights of every neuron
-        for (int counter = 0; counter < layerList.Length; counter++)
+        for (int counter = 1; counter < layerList.Length; counter++)
         {
             List<float[]> weightsList = new List<float[]>();
 
@@ -133,7 +133,7 @@ public class NeuralNetwork : MonoBehaviour
                 //
                 for(int n = 0; n < n_neurons[l-1].Length; n++)
                 {
-                    val += n_weights[l - 1][m][n] * n_neurons[l - 1][m];
+                    val += n_weights[l - 1][m][n] * n_neurons[l - 1][n];
                 }
 
                 //hyperbolic tangent 

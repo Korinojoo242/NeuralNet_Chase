@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 nets.Sort();
+
                 for (int i = 0; i < populationSize / 2; i++)
                 {
                     nets[i] = new NeuralNetwork(nets[i + (populationSize / 2)]);
