@@ -13,7 +13,7 @@ public class Spaceship : MonoBehaviour {
     Transform rotationCenter;
 
     [SerializeField]
-    float rotationRadius = 15f, angularSpeed = 0.5f;
+    float rotationRadius = 30f, angularSpeed = 0.5f;
 
     float posX, posY, angle = 0f;
 
@@ -81,16 +81,16 @@ public class Spaceship : MonoBehaviour {
 
             float[] output = net.FeedMeForward(inputs);
 
-            rBody.velocity = 4.5f * transform.up;
-            rBody.angularVelocity = 500f * output[0];
+            rBody.velocity = 5.5f * transform.up;
+            rBody.angularVelocity = 1000f * output[0];
 
             net.addNeuralFitness((1f-Mathf.Abs(inputs[0])));
         }
 	}
 
-    public void Init(NeuralNetwork net, Transform hex)
+    public void Init(NeuralNetwork net, Transform pl)
     {
-        this.player = hex;
+        this.player = pl;
         this.net = net;
         initilized = true;
     }

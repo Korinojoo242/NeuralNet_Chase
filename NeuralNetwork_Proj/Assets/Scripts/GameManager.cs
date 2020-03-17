@@ -8,11 +8,10 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     private bool Traning = false;
-    private int populationSize = 24;
+    private int populationSize = 40;
     private int generationNumber = 0;
     private int[] layers = new int[] { 1, 10, 10, 1 }; //1 input and 1 output
     private List<NeuralNetwork> nets;
-    private bool leftMouseDown = false;
     private List<Spaceship> spaceshipsList = null;
 
 
@@ -21,14 +20,13 @@ public class GameManager : MonoBehaviour
         Traning = false;
     }
 
-
     void Update()
     {
         if (Traning == false)
         {
             if (generationNumber == 0)
             {
-                InitSpaceshipNeuralNetworks();
+                InitCometNeuralNetworks();
             }
             else
             {
@@ -52,13 +50,13 @@ public class GameManager : MonoBehaviour
 
             Traning = true;
             Invoke("Timer", 15f);
-            CreateSpaceshipBodies();
+            CreateCometBodies();
         }
 
     }
 
 
-    private void CreateSpaceshipBodies()
+    private void CreateCometBodies()
     {
         if (spaceshipsList != null)
         {
@@ -80,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void InitSpaceshipNeuralNetworks()
+    void InitCometNeuralNetworks()
     {
         //population must be even, just setting it to 20 incase it's not
         if (populationSize % 2 != 0)
