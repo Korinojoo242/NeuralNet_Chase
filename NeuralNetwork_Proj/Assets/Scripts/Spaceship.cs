@@ -8,11 +8,29 @@ public class Spaceship : MonoBehaviour {
 
     private NeuralNetwork net;
     private Rigidbody2D rBody;
- 
+
+    [SerializeField]
+    Transform rotationCenter;
+
+    [SerializeField]
+    float rotationRadius = 15f, angularSpeed = 0.5f;
+
+    float posX, posY, angle = 0f;
 
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        posX = rotationCenter.position.x + Mathf.Cos(angle) * rotationRadius;
+        posY = rotationCenter.position.y + Mathf.Sin(angle) * rotationRadius;
+        transform.position = new Vector2(posX, posY);
+        angle = angle + Time.deltaTime * angularSpeed;
+
+        if (angle >= 360f)
+            angle = 0f;
     }
 
     void FixedUpdate ()

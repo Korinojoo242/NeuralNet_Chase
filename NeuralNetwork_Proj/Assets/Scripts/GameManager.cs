@@ -55,21 +55,6 @@ public class GameManager : MonoBehaviour
             CreateSpaceshipBodies();
         }
 
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            leftMouseDown = true;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            leftMouseDown = false;
-        }
-
-        if (leftMouseDown == true)
-        {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            player.transform.position = mousePosition;
-        }
     }
 
 
