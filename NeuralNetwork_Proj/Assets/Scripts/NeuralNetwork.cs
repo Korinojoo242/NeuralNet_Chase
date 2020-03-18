@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-//Gabrielle Hollaender 100623554
-//We will be using a FeedForward Neural network
+//Gabrielle Hollaender (100623554)
+//Using a FeedForward Neural network
+
+//References used: "Neural Networks in Unity" by Abhishek Nandy and Manisha Biswas (Apress, 2018).
 
 public class NeuralNetwork : IComparable<NeuralNetwork>
 {
@@ -124,6 +126,7 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
         }
 
         //go through neurons and get feedforward values
+        //this is done by iterating through our layers, uerons and calculating the value based on the gathered weights
         for (int l = 1; l < layerList.Length; l++)
         {
             for(int m = 0; m < n_neurons[l].Length; m++)
@@ -161,13 +164,17 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
 
                     if (rando_Num <= 2.0f)
                     {
-                        //if the number is one, flip the weight sign
-                        neural_Weight *= -1.0f;
+                        // flip the weight sign
+                        neural_Weight = UnityEngine.Random.Range(-0.5f, 0.5f);
                     }
 
+                    else if(rando_Num <= 4.0f)
+                    {
+                        neural_Weight *= -1.0f;
+                    }
                     else if (rando_Num <= 6.0f)
                     {
-                        //if the number is 3, random increase it to the max
+                        // random increase it to the max
 
                         float mult_factor = UnityEngine.Random.Range(0f, 1.0f) + 1;
 

@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Alvin Aniwa (100603501)
+//Cameron van Velzen (100591663)
+
+//References used: "Neural Networks in Unity" by Abhishek Nandy and Manisha Biswas (Apress, 2018).
+
 public class Spaceship : MonoBehaviour {
+    //has our game started
     private bool initilized = false;
     private Transform player;
 
@@ -67,8 +73,10 @@ public class Spaceship : MonoBehaviour {
             }
             rad = 360 - rad;
             rad -= angle;
+            
             if (rad < 0)
                 rad = 360 + rad;
+            
             if (rad >= 180f)
             {
                 rad = 360 - rad;

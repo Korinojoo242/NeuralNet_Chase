@@ -1,33 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+
+//Egor Lukoyanov (100633412)
+
+//References used: "Neural Networks in Unity" by Abhishek Nandy and Manisha Biswas (Apress, 2018).
+
 
 public class GameManager : MonoBehaviour
 {
+    //public variables
     public GameObject EnemyPrefab;
     public GameObject player;
 
+    //UI to display fitness
+    //public Text trackFitness; 
+
+    //training of AI and population generation
     private bool Traning = false;
     private int populationSize = 40;
     private int generationNumber = 0;
     private int[] layers = new int[] { 1, 10, 10, 1 }; //1 input and 1 output
+
+    //list to contain neural network 
     private List<NeuralNetwork> nets;
+
+    //list to contain comets
     private List<Spaceship> spaceshipsList = null;
-
-
-    void Timer()
-    {
-        Traning = false;
-    }
-
     void Update()
     {
+
         if (Traning == false)
         {
             if (generationNumber == 0)
             {
                 InitCometNeuralNetworks();
             }
+
             else
             {
                 nets.Sort();
@@ -37,7 +47,7 @@ public class GameManager : MonoBehaviour
                     nets[i] = new NeuralNetwork(nets[i + (populationSize / 2)]);
                     nets[i].neuralMutation();
 
-                    nets[i + (populationSize / 2)] = new NeuralNetwork(nets[i + (populationSize / 2)]); //too lazy to write a reset neuron matrix values method....so just going to make a deepcopy lol
+                    nets[i + (populationSize / 2)] = new NeuralNetwork(nets[i + (populationSize / 2)]); //so just going to make a deepcopy lol
                 }
 
                 for (int i = 0; i < populationSize; i++)
@@ -51,11 +61,16 @@ public class GameManager : MonoBehaviour
             Traning = true;
             Invoke("Timer", 15f);
             CreateCometBodies();
+
+            //trackFitness.text = "Neural Network Fitness: " + ;
+
+            
         }
 
     }
 
 
+    //creating our asteroid AI to follow the spaceship
     private void CreateCometBodies()
     {
         if (spaceshipsList != null)
@@ -69,6 +84,7 @@ public class GameManager : MonoBehaviour
 
         spaceshipsList = new List<Spaceship>();
 
+        //create our asteroids passed on the specified population list
         for (int i = 0; i < populationSize; i++)
         {
             Spaceship spaceship = ((GameObject)Instantiate(EnemyPrefab, new Vector3(UnityEngine.Random.Range(-10f, 10f), UnityEngine.Random.Range(-10f, 10f), 0), EnemyPrefab.transform.rotation)).GetComponent<Spaceship>();
@@ -86,9 +102,10 @@ public class GameManager : MonoBehaviour
             populationSize = 20;
         }
 
+        //instantiate our neural network 
         nets = new List<NeuralNetwork>();
 
-
+        //create a new list for mutations to be applied to, the add this to our original neural network list
         for (int i = 0; i < populationSize; i++)
         {
             NeuralNetwork net = new NeuralNetwork(layers);
@@ -96,4 +113,11 @@ public class GameManager : MonoBehaviour
             nets.Add(net);
         }
     }
+
+ 
+    void Timer()
+    {
+        Traning = false;
+    }
+
 }
