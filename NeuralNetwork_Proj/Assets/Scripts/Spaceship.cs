@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 //Alvin Aniwa (100603501)
@@ -14,6 +15,10 @@ public class Spaceship : MonoBehaviour {
 
     private NeuralNetwork net;
     private Rigidbody2D rBody;
+
+    public int colCounter = 0;
+    //UI to display collisions
+    public Text trackCollision;
 
     [SerializeField]
     Transform rotationCenter;
@@ -37,6 +42,8 @@ public class Spaceship : MonoBehaviour {
 
         if (angle >= 360f)
             angle = 0f;
+
+        trackCollision.text = "Total Number of Collsions: " + colCounter;
     }
 
     void FixedUpdate ()
@@ -103,5 +110,11 @@ public class Spaceship : MonoBehaviour {
         initilized = true;
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Enemy2(Clone)")
+        {
+            colCounter++;
+        }
+    }
 }

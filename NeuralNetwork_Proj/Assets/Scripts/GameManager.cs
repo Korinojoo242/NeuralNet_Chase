@@ -14,9 +14,6 @@ public class GameManager : MonoBehaviour
     public GameObject EnemyPrefab;
     public GameObject player;
 
-    //UI to display fitness
-    //public Text trackFitness; 
-
     //training of AI and population generation
     private bool Traning = false;
     private int populationSize = 40;
@@ -28,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     //list to contain comets
     private List<Spaceship> spaceshipsList = null;
+
     void Update()
     {
 
@@ -61,9 +59,6 @@ public class GameManager : MonoBehaviour
             Traning = true;
             Invoke("Timer", 15f);
             CreateCometBodies();
-
-            //trackFitness.text = "Neural Network Fitness: " + ;
-
             
         }
 

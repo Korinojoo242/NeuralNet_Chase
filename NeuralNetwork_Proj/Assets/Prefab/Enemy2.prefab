@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4424641762492087258}
   m_Layer: 0
   m_Name: Enemy2
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb8163373f0ede4eb4307d224fc4c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationCenter: {fileID: 0}
+  rotationRadius: 30
+  angularSpeed: 0.5
 --- !u!58 &-4424641762492087258
 CircleCollider2D:
   m_ObjectHideFlags: 0
