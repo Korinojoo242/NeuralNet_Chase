@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb8163373f0ede4eb4307d224fc4c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colCounter: 0
+  trackCollision: {fileID: 0}
   rotationCenter: {fileID: 0}
   rotationRadius: 30
   angularSpeed: 0.5

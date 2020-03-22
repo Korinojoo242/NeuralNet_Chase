@@ -30,6 +30,7 @@ public class Spaceship : MonoBehaviour {
 
     void Start()
     {
+
         rBody = GetComponent<Rigidbody2D>();
     }
 
@@ -39,9 +40,6 @@ public class Spaceship : MonoBehaviour {
         posY = rotationCenter.position.y + Mathf.Sin(angle) * rotationRadius;
         transform.position = new Vector2(posX, posY);
         angle = angle + Time.deltaTime * angularSpeed;
-
-        if (angle >= 360f)
-            angle = 0f;
 
         trackCollision.text = "Total Number of Collsions: " + colCounter;
     }
@@ -97,7 +95,7 @@ public class Spaceship : MonoBehaviour {
             float[] output = net.FeedMeForward(inputs);
 
             rBody.velocity = 5.5f * transform.up;
-            rBody.angularVelocity = 1000f * output[0];
+            rBody.angularVelocity = 500f * output[0];
 
             net.addNeuralFitness((1f-Mathf.Abs(inputs[0])));
         }
@@ -110,7 +108,7 @@ public class Spaceship : MonoBehaviour {
         initilized = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.name == "Enemy2(Clone)")
         {
