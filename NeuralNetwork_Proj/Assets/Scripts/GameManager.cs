@@ -89,6 +89,10 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     void InitCometNeuralNetworks()
     {
         //population must be even, just setting it to 20 incase it's not
